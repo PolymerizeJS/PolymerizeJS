@@ -1,12 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './PrimaryTextStyle.scss';
 
-function PrimaryText() {
+function PrimaryText({ primaryTextContent }) {
   return (
-    <h2 className="primary-text">
-      props.PrimaryTextContent
-    </h2>
+    <section className="primary-text">
+      <h2>
+        { primaryTextContent }
+      </h2>
+    </section>
   );
 }
+
+PrimaryText.propTypes = {
+  primaryTextContent: PropTypes.string.isRequired,
+};
 
 export default PrimaryText;
