@@ -1,12 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './SecondaryTextStyle.scss';
 
-function SecondaryText() {
+function SecondaryText({ secondaryTextContent }) {
   return (
-    <h3 className="secondary-text">
-      props.SecondaryTextContent
-    </h3>
+    <section className="secondary-text">
+      <h3>
+        { secondaryTextContent }
+      </h3>
+    </section>
   );
 }
+
+SecondaryText.propTypes = {
+  secondaryTextContent: PropTypes.string.isRequired,
+};
 
 export default SecondaryText;

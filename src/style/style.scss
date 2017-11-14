@@ -11,9 +11,16 @@ html, body, #app, .app-container {
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.6rem;
+  min-width: 1150px;
 }
 button, input {
   border: none;
   background-color: #FFFFFF;
   outline: none;
+}
+h2 {
+  line-height: 30px;
+}
+h3 {
+  line-height: 20px;
 }
