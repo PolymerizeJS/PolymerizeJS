@@ -1,16 +1,19 @@
 import React from 'react';
-import Alinea from '../../../assets/apollo/img/Alinea.jpg';
+import PropTypes from 'prop-types';
 
-function Image() {
+// Style import
+import './ImageStyle.scss';
+
+function Image({ imagePath, children }) {
   return (
-    <div className="img-container">
-      <img
-        src={`./dist/${Alinea}`}
-        alt="web template"
-        style={{ width: '100%' }}
-      />
-    </div>
+    <section className="img-container">
+      <img src={`./dist/${imagePath}`} alt="web template" />
+      { children }
+    </section>
   );
 }
 
+Image.propTypes = {
+  imagePath: PropTypes.string.isRequired,
+};
 export default Image;
