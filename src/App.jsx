@@ -1,14 +1,10 @@
 import React from 'react';
-
-// component import
-import DisplayBannerLeft from './containers/ApolloLayout/DisplayBannerLeft';
-import DisplayBannerRight from './containers/ApolloLayout/DisplayBannerRight';
+import LandingPage from './PageComponent/LandingPage';
 
 function App() {
   return (
     <div className="app-container">
-      <DisplayBannerLeft />
-      <DisplayBannerRight />
+      <LandingPage />
     </div>
   );
 }

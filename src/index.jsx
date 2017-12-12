@@ -1,19 +1,19 @@
 import React from 'react';
-
-// Redux import
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import polymerizeApp from './reducers/polymerizeApp';
 
-// React component impo
+// Component
 import App from './App';
+
+// Reducer
+import PolymerizeApp from './reducer';
 
 // Style import
 import './style/reset.css';
 import './style/style.scss';
 
-const store = createStore(polymerizeApp);
+const store = createStore(PolymerizeApp);
 
 render(
   <Provider store={store}>
