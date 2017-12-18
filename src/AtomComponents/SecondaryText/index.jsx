@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './style.scss';
+
 function SecondaryText({ children, className }) {
   return (
     <h2 className={`secondary-text ${className}`}>
