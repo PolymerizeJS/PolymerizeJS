@@ -1,16 +1,14 @@
 import { combineReducers } from 'redux';
 
 // reducers
-import blockContentReducer from './TemplateComponent/BlockContent/blockContentReducer';
-import callToActionReducer from './TemplateComponent/CallToAction/callToActionReducer';
-import companyNameReducer from './TemplateComponent/CompanyName/companyNameReducer';
-import mainNavReducer from './TemplateComponent/MainNav/mainNavReducer';
+import headerBlockReducer from './ContainerComponent/HeaderBlock/headerBlockReducer';
+import bannerBlockReducer from './ContainerComponent/BannerBlock/bannerBlockReducer';
+import contentBlockReducer from './ContainerComponent/ContentBlock/contentBlockReducer';
 
 const PolymerizeApp = combineReducers({
-  blockContentReducer,
-  callToActionReducer,
-  companyNameReducer,
-  mainNavReducer,
+  headerBlockReducer,
+  bannerBlockReducer,
+  contentBlockReducer,
 });
 
 export default PolymerizeApp;

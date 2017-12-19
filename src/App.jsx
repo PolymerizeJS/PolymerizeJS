@@ -1,11 +1,12 @@
 import React from 'react';
+
 import LandingPage from './PageComponent/LandingPage';
 
 function App() {
   return (
-    <div className="app-container">
+    <main className="app-container">
       <LandingPage />
-    </div>
+    </main>
   );
 }
 
