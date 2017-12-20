@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-function MediumButton({ children, className}) {
+function MediumButton({ children, className }) {
   return (
     <button className={`medium-button ${className}`}>
       {children}

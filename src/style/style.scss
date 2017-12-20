@@ -1,16 +1,20 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 html, body, #app, .app-container {
   width: 100%;
 }
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
 }
+
 button, input {
   border: none;
   border-radius: 0;
@@ -20,4 +24,8 @@ button, input {
 
 main {
   background-color: #777777;
+}
+
+a {
+  text-decoration: none;
 }

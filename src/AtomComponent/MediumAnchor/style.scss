@@ -1,4 +1,5 @@
-.medium-button {
+.medium-anchor {
+  display: inline-block;
   font-size: 1.0rem;
   letter-spacing: 0.01px;
   color: white;
@@ -8,7 +9,7 @@
   transition: all ease 0.5s;
 }
 
-.medium-button:hover {
+.medium-anchor:hover {
   background: #0890EF;
   box-shadow: 0 5px 4px 0 rgba(5,64,129,0.59);
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 import MediumText from '../../AtomComponent/MediumText';
 import SmallText from '../../AtomComponent/SmallText';
-import MediumButton from '../../AtomComponent/MediumButton';
+import MediumAnchor from '../../AtomComponent/MediumAnchor';
 
 import './style.scss';
 
@@ -16,9 +16,9 @@ function CallToAction() {
         Polymerize is created after seeing many talented software engineers struggling to make sense of their UI design.
         We are constantly thinking ways to make it better. There will be new feature every month.
       </SmallText>
-      <MediumButton>
+      <MediumAnchor>
         Github
-      </MediumButton>
+      </MediumAnchor>
     </section>
   );
 }
