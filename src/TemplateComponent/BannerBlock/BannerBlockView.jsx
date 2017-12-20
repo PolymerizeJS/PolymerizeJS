@@ -9,7 +9,7 @@ import PrimaryText from '../../AtomComponent/PrimaryText';
 import './style.scss';
 
 // assets
-import AlineaImg from '../../assets/Alinea.jpg';
+import AlineaImg from '../../assets/placeholder.jpeg';
 
 function BannerBlockView() {
   return (

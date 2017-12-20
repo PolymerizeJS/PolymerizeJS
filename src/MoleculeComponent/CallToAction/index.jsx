@@ -13,8 +13,9 @@ function CallToAction() {
         Styled and configurable templates with reusable components to enable software engineers to create elegant product
       </MediumText>
       <SmallText>
-        Polymerize is created after seeing many talented software engineers struggling to make sense of their UI design.
-        We are constantly thinking ways to make it better. There will be new feature every month.
+        Polymerize is created after seeing many talented software engineers struggling to come up with initial UI layout.
+        <br />
+        We are constantly finding ways to make it better. There will be new features every month.
       </SmallText>
       <MediumAnchor>
         Github
