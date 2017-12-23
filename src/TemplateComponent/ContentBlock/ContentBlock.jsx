@@ -2,9 +2,7 @@ import { connect } from 'react-redux';
 
 import ContentBlockView from './ContentBlockView';
 
-const mapStateToProps = (state) => {
-  return state.contentBlockReducer;
-};
+const mapStateToProps = state => state.contentBlockReducer;
 
 const ContentBlock = connect(mapStateToProps)(ContentBlockView);
 

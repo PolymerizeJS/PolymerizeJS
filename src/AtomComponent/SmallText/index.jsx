@@ -12,12 +12,11 @@ function SmallText({ children, className }) {
 }
 
 SmallText.defaultProps = {
-  children: '',
   className: '',
 };
 
 SmallText.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.string.isRequired,
   className: PropTypes.string,
 };
 

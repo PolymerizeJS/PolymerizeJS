@@ -1,42 +1,17 @@
-.banner-block {
+.banner-block-container {
   position: relative;
   width: 100%;
   height: 560px;
   overflow: hidden;
 }
 
-.bb-left-container, .bb-right-container {
+.banner-container {
+  width: 100%;
+  height: 100%;
   position: relative;
   display: inline-block;
   vertical-align: top;
-}
-
-.bb-left-container {
-  width: 100%;
-  height: 100%;
-  // background: url("../../assets/banner-left-bg.jpg");
+  padding: 10%;
   background: #e7e7e7;
   background-size: 100% 100%;
-  padding: 10%;
-}
-
-.bb-left h2, .bb-right h2,
-.bb-left h3, .bb-right h3,
-.bb-left h4, .bb-right h4,
-.bb-left p, .bb-right p,
-.bb-left a, .bb-right a,
-.bb-left button, .bb-right button {
-  margin-top: 2%;
-}
-
-.bb-left {
-  position: absolute;
-  width: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.bb-right-container {
-  width: 67%;
-  height: 100%;
 }

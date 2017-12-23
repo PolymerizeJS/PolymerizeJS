@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import MediumText from '../../AtomComponent/MediumText';
 import SmallText from '../../AtomComponent/SmallText';
@@ -6,22 +7,32 @@ import MediumAnchor from '../../AtomComponent/MediumAnchor';
 
 import './style.scss';
 
-function CallToAction() {
+function CallToAction({ primaryTextContent, secondaryTextContent, buttonName }) {
   return (
     <section className="call-to-action">
       <MediumText>
-        Styled and configurable templates with reusable components to enable software engineers to create elegant product
+        {primaryTextContent}
       </MediumText>
       <SmallText>
-        Polymerize is created after seeing many talented software engineers struggling to come up with initial UI layout.
-        <br />
-        We are constantly finding ways to make it better. There will be new features every month.
+        {secondaryTextContent}
       </SmallText>
       <MediumAnchor>
-        Github
+        {buttonName}
       </MediumAnchor>
     </section>
   );
 }
+
+CallToAction.defaultProps = {
+  primaryTextContent: '',
+  secondaryTextContent: '',
+  buttonName: '',
+};
+
+CallToAction.propTypes = {
+  primaryTextContent: PropTypes.string,
+  secondaryTextContent: PropTypes.string,
+  buttonName: PropTypes.string,
+};
 
 export default CallToAction;
