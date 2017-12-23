@@ -1,7 +1,7 @@
-const loadContent = (title, textContent, buttonName) => ({
-  type: 'LOAD_CONTENT',
-  title,
-  textContent,
+const loadContent = (primaryTextContent, secondaryTextContent, buttonName) => ({
+  type: 'LOAD_BLOCK_CONTENT',
+  primaryTextContent,
+  secondaryTextContent,
   buttonName,
 });
 

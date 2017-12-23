@@ -1,15 +1,15 @@
 const initialState = {
-  title: '',
-  textContent: '',
+  primaryTextContent: '',
+  secondaryTextContent: '',
   buttonName: '',
 };
 
 function handleAction(state = initialState, action) {
   switch (action.type) {
-    case 'LOAD_CONTENT':
+    case 'LOAD_BLOCK_CONTENT':
       return {
-        title: action.title,
-        textContent: action.textContent,
+        primaryTextContent: action.primaryTextContent,
+        secondaryTextContent: action.secondaryTextContent,
         buttonName: action.buttonName,
       };
     default:

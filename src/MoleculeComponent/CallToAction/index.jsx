@@ -7,32 +7,36 @@ import MediumAnchor from '../../AtomComponent/MediumAnchor';
 
 import './style.scss';
 
-function CallToAction({ primaryTextContent, secondaryTextContent, buttonName }) {
+function CallToAction({ children }) {
   return (
     <section className="call-to-action">
       <MediumText>
-        {primaryTextContent}
+        {children.primaryTextContent}
       </MediumText>
       <SmallText>
-        {secondaryTextContent}
+        {children.secondaryTextContent}
       </SmallText>
       <MediumAnchor>
-        {buttonName}
+        {children.buttonName}
       </MediumAnchor>
     </section>
   );
 }
 
 CallToAction.defaultProps = {
-  primaryTextContent: '',
-  secondaryTextContent: '',
-  buttonName: '',
+  children: {
+    primaryTextContent: '',
+    secondaryTextContent: '',
+    buttonName: '',
+  },
 };
 
 CallToAction.propTypes = {
-  primaryTextContent: PropTypes.string,
-  secondaryTextContent: PropTypes.string,
-  buttonName: PropTypes.string,
+  children: PropTypes.shape({
+    primaryTextContent: PropTypes.string,
+    secondaryTextContent: PropTypes.string,
+    buttonName: PropTypes.string,
+  }),
 };
 
 export default CallToAction;

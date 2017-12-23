@@ -7,25 +7,18 @@ import FullWidthImage from '../../AtomComponent/FullWidthImg';
 import MediumAnchor from '../../AtomComponent/MediumAnchor';
 import PlaceHolder2 from '../../assets/placeholder2.jpeg';
 
-import ContentBlockAction from './ContentBlockAction';
-
 import './style.scss';
 
-function BlockContentView({ dispatch, title, textContent, buttonName }) {
-  dispatch(ContentBlockAction(
-    'Alinea',
-    'Classic web layout designed for small and mid-sized company to optimize the conversion rate.',
-    'Get it on Github',
-  ));
+function BlockContentView({ primaryTextContent, secondaryTextContent, buttonName }) {
   return (
     <section className="content-block">
       <div className="cb-left-container">
         <div className="cb-left">
           <MediumText>
-            {title}
+            {primaryTextContent}
           </MediumText>
           <SmallText>
-            {textContent}
+            {secondaryTextContent}
           </SmallText>
           <MediumAnchor>
             {buttonName}
@@ -42,15 +35,14 @@ function BlockContentView({ dispatch, title, textContent, buttonName }) {
 }
 
 BlockContentView.defaultProps = {
-  title: '',
-  textContent: '',
+  primaryTextContent: '',
+  secondaryTextContent: '',
   buttonName: '',
 };
 
 BlockContentView.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-  title: PropTypes.string,
-  textContent: PropTypes.string,
+  primaryTextContent: PropTypes.string,
+  secondaryTextContent: PropTypes.string,
   buttonName: PropTypes.string,
 };
 
