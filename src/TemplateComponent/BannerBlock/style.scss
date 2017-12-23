@@ -12,18 +12,28 @@
 }
 
 .bb-left-container {
-  width: 33%;
+  width: 100%;
   height: 100%;
-  background: url("../../assets/banner-left-bg.jpg");
+  // background: url("../../assets/banner-left-bg.jpg");
+  background: #e7e7e7;
   background-size: 100% 100%;
+  padding: 10%;
+}
+
+.bb-left h2, .bb-right h2,
+.bb-left h3, .bb-right h3,
+.bb-left h4, .bb-right h4,
+.bb-left p, .bb-right p,
+.bb-left a, .bb-right a,
+.bb-left button, .bb-right button {
+  margin-top: 2%;
 }
 
 .bb-left {
   position: absolute;
-  width: 67%;
+  width: 50%;
   top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .bb-right-container {

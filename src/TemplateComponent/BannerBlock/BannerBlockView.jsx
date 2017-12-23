@@ -15,16 +15,16 @@ function BannerBlockView() {
   return (
     <section className="banner-block">
       <div className="bb-left-container">
+        <PrimaryText className="logo"> 
+          Polymerize
+        </PrimaryText>
         <div className="bb-left">
-          <PrimaryText>
-            Polymerize
-          </PrimaryText>
           <CallToAction />
         </div>
       </div>
-      <div className="bb-right-container">
+      {/* <div className="bb-right-container">
         <FullWidthImg src={`dist/${AlineaImg}`} alt="apollo template" />
-      </div>
+      </div> */}
     </section>
   );
 }

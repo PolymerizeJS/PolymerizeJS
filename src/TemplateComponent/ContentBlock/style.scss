@@ -5,6 +5,10 @@
   overflow: hidden;
 }
 
+h1, h2, h3, h4, p {
+  color: #555555 !important;
+}
+
 .cb-left-container, .cb-right-container {
   position: relative;
   display: inline-block;
@@ -14,22 +18,43 @@
 }
 
 .cb-left-container {
-  background-color: #555555;
+  overflow: hidden;
+  background: #ffffff;
 }
 
-.cb-left {
+.cb-right-container {
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+.cb-left, .cb-right {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.cb-right {
-  height: 100%;
+.cb-left {
+  width: 60%;
+  left: 20%;
+}
+
+.cb-left h1, .cb-right h1,
+.cb-left h2, .cb-right h2,
+.cb-left h3, .cb-right h3,
+.cb-left h4, .cb-right h4,
+.cb-left p, .cb-right p,
+.cb-left a, .cb-right a,
+.cb-left button, .cb-right button {
+  margin-top: 2%;
 }
 
 .cb-right img {
-  height: 100%;
-  width: auto;
-  margin: 0 auto;
+  height: auto;
+  width: 100%;
 }
