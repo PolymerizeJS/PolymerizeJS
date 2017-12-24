@@ -12,24 +12,20 @@ import './style.scss';
 function BlockContentView({ primaryTextContent, secondaryTextContent, buttonName }) {
   return (
     <section className="content-block">
-      <div className="cb-left-container">
-        <div className="cb-left">
-          <MediumText>
-            {primaryTextContent}
-          </MediumText>
-          <SmallText>
-            {secondaryTextContent}
-          </SmallText>
-          <MediumAnchor>
-            {buttonName}
-          </MediumAnchor>
-        </div>
-      </div>
-      <div className="cb-right-container">
+      <MediumText>
+        {primaryTextContent}
+      </MediumText>
+      <SmallText>
+        {secondaryTextContent}
+      </SmallText>
+      <MediumAnchor>
+        {buttonName}
+      </MediumAnchor>
+      {/* <div className="cb-right-container">
         <div className="cb-right">
           <FullWidthImage src={`dist/${PlaceHolder2}`} alt="placeholder" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

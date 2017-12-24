@@ -15,22 +15,17 @@ import BannerBlock from './BannerBlock';
 
 function BannerBlockView({ primaryTextContent, secondaryTextContent, buttonName }) {
   return (
-    <section className="banner-block-container">
-      <div className="banner-container">
-        <PrimaryText className="logo">
-          Polymerize
-        </PrimaryText>
-        <CallToAction>
-          {{
-            primaryTextContent,
-            secondaryTextContent,
-            buttonName,
-          }}
-        </CallToAction>
-      </div>
-      {/* <div className="bb-right-container">
-        <FullWidthImg src={`dist/${AlineaImg}`} alt="apollo template" />
-      </div> */}
+    <section className="banner-block">
+      <PrimaryText className="logo">
+        Polymerize
+      </PrimaryText>
+      <CallToAction>
+        {{
+          primaryTextContent,
+          secondaryTextContent,
+          buttonName,
+        }}
+      </CallToAction>
     </section>
   );
 }
