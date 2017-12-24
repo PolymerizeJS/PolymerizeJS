@@ -1,0 +1,20 @@
+.content-block {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 60px 10%;
+  width: 100%;
+  height: auto;
+  background-color: #F6F6F6;
+}
+
+.content-block img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  transform: translateX(-50%);
+}
+
+h1, h2, h3, h4, p {
+  color: #555555 !important;
+}
