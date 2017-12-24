@@ -3,29 +3,22 @@ import PropTypes from 'prop-types';
 
 import MediumText from '../../AtomComponent/MediumText';
 import SmallText from '../../AtomComponent/SmallText';
-import FullWidthImage from '../../AtomComponent/FullWidthImg';
 import MediumAnchor from '../../AtomComponent/MediumAnchor';
-import PlaceHolder2 from '../../assets/placeholder2.jpeg';
+
+import TitleTextButton from '../../MoleculeComponent/TitleTextButton';
 
 import './style.scss';
 
 function BlockContentView({ primaryTextContent, secondaryTextContent, buttonName }) {
   return (
     <section className="content-block">
-      <MediumText>
-        {primaryTextContent}
-      </MediumText>
-      <SmallText>
-        {secondaryTextContent}
-      </SmallText>
-      <MediumAnchor>
-        {buttonName}
-      </MediumAnchor>
-      {/* <div className="cb-right-container">
-        <div className="cb-right">
-          <FullWidthImage src={`dist/${PlaceHolder2}`} alt="placeholder" />
-        </div>
-      </div> */}
+      <TitleTextButton>
+        {{
+          primaryTextContent,
+          secondaryTextContent,
+          buttonName,
+        }}
+      </TitleTextButton>
     </section>
   );
 }

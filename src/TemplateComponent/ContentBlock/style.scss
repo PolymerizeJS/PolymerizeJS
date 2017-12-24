@@ -1,9 +1,11 @@
 .content-block {
   position: relative;
   display: inline-block;
-  width: 100%;
+  vertical-align: top;
   padding: 60px 10%;
-  overflow: hidden;
+  width: 100%;
+  height: auto;
+  background-color: #F6F6F6;
 }
 
 h1, h2, h3, h4, p {
