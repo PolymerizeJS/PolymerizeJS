@@ -1,10 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import MediumText from '../../AtomComponent/MediumText';
-import SmallText from '../../AtomComponent/SmallText';
-import MediumAnchor from '../../AtomComponent/MediumAnchor';
-
 import TitleTextButton from '../../MoleculeComponent/TitleTextButton';
 
 import './style.scss';

@@ -3,15 +3,10 @@ import PropTypes from 'prop-types';
 
 // component
 import CallToAction from '../../MoleculeComponent/CallToAction';
-import FullWidthImg from '../../AtomComponent/FullWidthImg';
 import PrimaryText from '../../AtomComponent/PrimaryText';
 
 // style
 import './style.scss';
-
-// assets
-import AlineaImg from '../../assets/placeholder.jpeg';
-import BannerBlock from './BannerBlock';
 
 function BannerBlockView({ primaryTextContent, secondaryTextContent, buttonName }) {
   return (
