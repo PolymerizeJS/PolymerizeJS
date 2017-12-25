@@ -1,0 +1,9 @@
+@mixin block-style($w) {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 60px 10%;
+  width: $w;
+  height: auto;
+  overflow: hidden;
+}
