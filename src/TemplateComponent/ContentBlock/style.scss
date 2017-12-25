@@ -1,10 +1,11 @@
+@import "../../style/_mixins.scss";
+
 .content-block {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  padding: 60px 10%;
-  width: 100%;
-  height: auto;
+  @include block-style(100%);
+}
+
+.content-block h2:first-child {
+  margin-top: 0;
 }
 
 .content-block img {
@@ -12,16 +13,4 @@
   width: 100%;
   height: auto;
   transform: translateX(-50%);
-}
-
-$basecolor: #F1F1F1;
-
-@for $i from 2 through 9 {
-  .content-block:nth-of-type(#{$i}) {
-    background-color: darken($color: $basecolor, $amount: $i * 10);
-  }
-}
-
-h1, h2, h3, h4, p {
-  color: #555555 !important;
 }

@@ -1,0 +1,24 @@
+@import "../../style/_mixins.scss";
+
+.contact-form-block {
+  @include block-style(100%);
+}
+
+.contact-form {
+  margin-top: 2%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+  background-color: #FFFFFF;
+}
+
+.contact-form input {
+  height: 40px;
+}
+
+.contact-form textarea {
+  height: 300px;
+}
