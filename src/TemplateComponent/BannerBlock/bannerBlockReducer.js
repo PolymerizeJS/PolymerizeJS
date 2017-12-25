@@ -4,7 +4,7 @@ const initialState = {
   buttonName: '',
 };
 
-function handleAction(state = initialState, action) {
+const handleAction = (state = initialState, action) => {
   switch (action.type) {
     case 'LOAD_BANNER_CONTENT':
       return {

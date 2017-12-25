@@ -1,11 +1,11 @@
+@import "../../style/_mixins.scss";
+
 .content-block {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  padding: 60px 10%;
-  width: 100%;
-  height: auto;
-  background-color: #F6F6F6;
+  @include block-style(100%);
+}
+
+.content-block h2:first-child {
+  margin-top: 0;
 }
 
 .content-block img {
@@ -13,8 +13,4 @@
   width: 100%;
   height: auto;
   transform: translateX(-50%);
-}
-
-h1, h2, h3, h4, p {
-  color: #555555 !important;
 }

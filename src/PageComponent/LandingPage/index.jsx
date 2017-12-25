@@ -2,6 +2,7 @@ import React from 'react';
 
 import BannerBlock from '../../TemplateComponent/BannerBlock/BannerBlock';
 import ContentBlock from '../../TemplateComponent/ContentBlock/ContentBlock';
+import ContactFormBlock from '../../TemplateComponent/ContactFormBlock/ContactFormBlock';
 
 import './style.scss';
 
@@ -14,7 +15,7 @@ function LandingPage() {
     },
     {
       primaryTextContent: 'Apollo',
-      secondaryTextContent: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+      secondaryTextContent: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
       buttonName: 'Get it on Github',
     },
   ];
@@ -23,9 +24,9 @@ function LandingPage() {
   });
   return (
     <section className="landing-page">
-      {/* <HeaderBlock /> */}
       <BannerBlock />
       {ContentBlockMap}
+      <ContactFormBlock />
     </section>
   );
 }

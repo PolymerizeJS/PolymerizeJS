@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import MediumText from '../../AtomComponent/MediumText';
+import SecondaryText from '../../AtomComponent/SecondaryText';
 import SmallText from '../../AtomComponent/SmallText';
 import MediumAnchor from '../../AtomComponent/MediumAnchor';
 
@@ -10,9 +10,9 @@ import './style.scss';
 function TitleTextButton({ children }) {
   return (
     <section className="title-text-button">
-      <MediumText>
+      <SecondaryText>
         {children.primaryTextContent}
-      </MediumText>
+      </SecondaryText>
       <SmallText>
         {children.secondaryTextContent}
       </SmallText>
