@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-function MediumButton({ children, className }) {
+function MediumButton({ children, onClick, className }) {
   return (
-    <button className={`medium-button ${className}`}>
+    <button
+      className={`medium-button ${className}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );
@@ -14,11 +17,13 @@ function MediumButton({ children, className }) {
 MediumButton.defaultProps = {
   children: '',
   className: '',
+  onClick: '',
 };
 
 MediumButton.propTypes = {
   children: PropTypes.string,
   className: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default MediumButton;
