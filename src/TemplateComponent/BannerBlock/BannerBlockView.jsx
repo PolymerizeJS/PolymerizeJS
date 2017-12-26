@@ -8,7 +8,7 @@ import PrimaryText from '../../AtomComponent/PrimaryText';
 // style
 import './style.scss';
 
-function BannerBlockView({ primaryTextContent, secondaryTextContent, buttonName }) {
+function BannerBlockView({ primaryTextContent, secondaryTextContent, anchorName, buttonName }) {
   return (
     <section className="banner-block">
       <PrimaryText className="logo">
@@ -18,6 +18,7 @@ function BannerBlockView({ primaryTextContent, secondaryTextContent, buttonName 
         {{
           primaryTextContent,
           secondaryTextContent,
+          anchorName,
           buttonName,
         }}
       </CallToAction>
@@ -28,12 +29,14 @@ function BannerBlockView({ primaryTextContent, secondaryTextContent, buttonName 
 BannerBlockView.defaultProps = {
   primaryTextContent: '',
   secondaryTextContent: '',
+  anchorName: '',
   buttonName: '',
 };
 
 BannerBlockView.propTypes = {
   primaryTextContent: PropTypes.string,
   secondaryTextContent: PropTypes.string,
+  anchorName: PropTypes.string,
   buttonName: PropTypes.string,
 };
 

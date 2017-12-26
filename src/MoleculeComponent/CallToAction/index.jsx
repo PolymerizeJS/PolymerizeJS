@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import MediumText from '../../AtomComponent/MediumText';
 import SmallText from '../../AtomComponent/SmallText';
 import MediumAnchor from '../../AtomComponent/MediumAnchor';
+import MediumButton from '../../AtomComponent/MediumButton';
 
 import './style.scss';
 
@@ -16,9 +17,18 @@ function CallToAction({ children }) {
       <SmallText>
         {children.secondaryTextContent}
       </SmallText>
-      <MediumAnchor>
-        {children.buttonName}
-      </MediumAnchor>
+      {
+        children.buttonName !== '' &&
+        <MediumButton>
+          {children.buttonName}
+        </MediumButton>
+      }
+      {
+        children.anchorName !== '' &&
+        <MediumAnchor>
+          {children.anchorName}
+        </MediumAnchor>
+      }
     </section>
   );
 }
@@ -27,6 +37,7 @@ CallToAction.defaultProps = {
   children: {
     primaryTextContent: '',
     secondaryTextContent: '',
+    anchorName: '',
     buttonName: '',
   },
 };
@@ -35,6 +46,7 @@ CallToAction.propTypes = {
   children: PropTypes.shape({
     primaryTextContent: PropTypes.string,
     secondaryTextContent: PropTypes.string,
+    anchorName: PropTypes.string,
     buttonName: PropTypes.string,
   }),
 };
