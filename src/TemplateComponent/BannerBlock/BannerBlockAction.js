@@ -1,7 +1,8 @@
-const loadBannerContent = (primaryTextContent, secondaryTextContent, buttonName) => ({
+const loadBannerContent = (primaryTextContent, secondaryTextContent, anchorName, buttonName) => ({
   type: 'LOAD_BANNER_CONTENT',
   primaryTextContent,
   secondaryTextContent,
+  anchorName,
   buttonName,
 });
 
