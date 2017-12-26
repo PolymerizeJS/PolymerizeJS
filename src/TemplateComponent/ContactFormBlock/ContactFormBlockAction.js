@@ -18,10 +18,7 @@ export const handleMessage = message => ({
   message,
 });
 
-export const handleSend = (name, subject, email, message) => ({
+export const handleSend = url => ({
   type: 'HANDLE_SEND',
-  name,
-  subject,
-  email,
-  message,
+  url,
 });

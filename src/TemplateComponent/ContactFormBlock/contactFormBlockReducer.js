@@ -3,6 +3,7 @@ const initialState = {
   subject: '',
   email: '',
   message: '',
+  url: '',
 };
 
 const handleAction = (state = initialState, action) => {
@@ -34,6 +35,13 @@ const handleAction = (state = initialState, action) => {
         name: state.name,
         subject: state.subject,
         email: state.email,
+      };
+    case 'HANDLE_SEND':
+      return {
+        name: state.name,
+        subject: state.subject,
+        email: state.email,
+        message: state.message,
       };
     default:
       return state;

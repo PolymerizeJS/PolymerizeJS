@@ -5,13 +5,15 @@ import TitleTextButton from '../../MoleculeComponent/TitleTextButton';
 
 import './style.scss';
 
-function BlockContentView({ primaryTextContent, secondaryTextContent, buttonName }) {
+function BlockContentView({ primaryTextContent, secondaryTextContent, anchorName, buttonName }) {
+  console.log('This is anchor name: ', anchorName);
   return (
     <section className="content-block">
       <TitleTextButton>
         {{
           primaryTextContent,
           secondaryTextContent,
+          anchorName,
           buttonName,
         }}
       </TitleTextButton>
@@ -22,12 +24,14 @@ function BlockContentView({ primaryTextContent, secondaryTextContent, buttonName
 BlockContentView.defaultProps = {
   primaryTextContent: '',
   secondaryTextContent: '',
+  anchorName: '',
   buttonName: '',
 };
 
 BlockContentView.propTypes = {
   primaryTextContent: PropTypes.string,
   secondaryTextContent: PropTypes.string,
+  anchorName: PropTypes.string,
   buttonName: PropTypes.string,
 };
 

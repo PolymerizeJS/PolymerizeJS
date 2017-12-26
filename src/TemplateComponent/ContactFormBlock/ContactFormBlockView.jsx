@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import SecondaryText from '../../AtomComponent/SecondaryText';
 import SmallText from '../../AtomComponent/SmallText';
-import HalfWidthInput from '../../AtomComponent/HalfWidthInput';
-import HalfWidthTextarea from '../../AtomComponent/HalfWidthTextarea';
+import FullWidthInput from '../../AtomComponent/FullWidthInput';
+import FullWidthTextarea from '../../AtomComponent/FullWidthTextarea';
 import MediumButton from '../../AtomComponent/MediumButton';
 
 import {
@@ -22,29 +23,48 @@ function ContactFormBlockView({ dispatch, name, subject, email, message }) {
       <SecondaryText>Contact Us</SecondaryText>
       <form className="contact-form">
         <SmallText>Name:</SmallText>
-        <HalfWidthInput
+        <FullWidthInput
           onChange={e => dispatch(handleName(e.target.value))}
           value={name}
         />
         <SmallText>Subject:</SmallText>
-        <HalfWidthInput
+        <FullWidthInput
           onChange={e => dispatch(handleSubject(e.target.value))}
           value={subject}
         />
         <SmallText>Email:</SmallText>
-        <HalfWidthInput
+        <FullWidthInput
           onChange={e => dispatch(handleEmail(e.target.value))}
           value={email}
         />
         <SmallText>Message:</SmallText>
-        <HalfWidthTextarea
+        <FullWidthTextarea
           onChange={e => dispatch(handleMessage(e.target.value))}
           value={message}
         />
-        <MediumButton>Send</MediumButton>
+        <MediumButton
+          onClick={() => dispatch(handleSend(''))}
+        >
+          Send
+        </MediumButton>
       </form>
     </section>
   );
 }
+
+ContactFormBlockView.defaultProps = {
+  name: '',
+  subject: '',
+  email: '',
+  message: '',
+};
+
+ContactFormBlockView.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  name: PropTypes.string,
+  subject: PropTypes.string,
+  email: PropTypes.string,
+  message: PropTypes.string,
+};
 
 export default ContactFormBlockView;

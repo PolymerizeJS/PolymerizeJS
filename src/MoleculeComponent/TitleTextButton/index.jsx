@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 import SecondaryText from '../../AtomComponent/SecondaryText';
 import SmallText from '../../AtomComponent/SmallText';
+import MediumButton from '../../AtomComponent/MediumButton';
 import MediumAnchor from '../../AtomComponent/MediumAnchor';
 
 import './style.scss';
 
 function TitleTextButton({ children }) {
+  console.log('title text button children: ', children);
   return (
     <section className="title-text-button">
       <SecondaryText>
@@ -16,9 +18,18 @@ function TitleTextButton({ children }) {
       <SmallText>
         {children.secondaryTextContent}
       </SmallText>
-      <MediumAnchor>
-        {children.buttonName}
-      </MediumAnchor>
+      {
+        children.buttonName !== '' &&
+        <MediumButton>
+          {children.buttonName}
+        </MediumButton>
+      }
+      {
+        children.anchorName !== '' &&
+        <MediumAnchor>
+          {children.anchorName}
+        </MediumAnchor>
+      }
     </section>
   );
 }
