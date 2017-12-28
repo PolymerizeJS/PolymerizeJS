@@ -1,0 +1,15 @@
+@import "../../style/_mixins.scss";
+
+.header-block {
+  @include block-style(100%);
+  position: absolute;
+  z-index: 10;
+}
+
+.header-block .logo {
+  display: inline-block;
+}
+
+.header-block * {
+  vertical-align: middle;
+}
