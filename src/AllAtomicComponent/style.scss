@@ -1,0 +1,15 @@
+@import "../style/_mixins.scss";
+
+.all-atomic-component {
+  @include block-style(100%);
+  background: #e7e7e7;
+}
+
+.all-atomic-component * {
+  display: block;
+  margin-bottom: 2%;
+}
+
+.all-atomic-component *:last-child {
+  margin-bottom: 0;
+}
