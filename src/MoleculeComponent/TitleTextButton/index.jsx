@@ -9,7 +9,6 @@ import MediumAnchor from '../../AtomComponent/MediumAnchor';
 import './style.scss';
 
 function TitleTextButton({ children }) {
-  console.log('title text button children: ', children);
   return (
     <section className="title-text-button">
       <SecondaryText>
