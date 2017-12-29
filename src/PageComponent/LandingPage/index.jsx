@@ -4,6 +4,7 @@ import HeaderBlock from '../../TemplateComponent/HeaderBlock/HeaderBlock';
 import BannerBlock from '../../TemplateComponent/BannerBlock/BannerBlock';
 import ContentBlock from '../../TemplateComponent/ContentBlock/ContentBlock';
 import ContactFormBlock from '../../TemplateComponent/ContactFormBlock/ContactFormBlock';
+import AllAtomicComponent from '../../AllAtomicComponent';
 
 import './style.scss';
 
@@ -53,6 +54,7 @@ function LandingPage() {
       {BannerBlockMap}
       {ContentBlockMap}
       <ContactFormBlock />
+      <AllAtomicComponent />
     </section>
   );
 }
