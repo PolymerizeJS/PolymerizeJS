@@ -8,6 +8,15 @@ import ContactFormBlock from '../../TemplateComponent/ContactFormBlock/ContactFo
 import './style.scss';
 
 function LandingPage() {
+  const headerBlockData = {
+    appName: 'Polymerize',
+    navItem: [
+      {
+        route: '#',
+        routeName: 'documentation',
+      },
+    ],
+  };
   const bannerBlockData = [
     {
       primaryTextContent: 'Styled and configurable templates with reusable components to enable software engineers to create elegant product',
@@ -38,7 +47,9 @@ function LandingPage() {
   });
   return (
     <section className="landing-page">
-      <HeaderBlock />
+      <HeaderBlock>
+        {headerBlockData}
+      </HeaderBlock>
       {BannerBlockMap}
       {ContentBlockMap}
       <ContactFormBlock />

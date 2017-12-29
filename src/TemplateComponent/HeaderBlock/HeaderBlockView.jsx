@@ -6,26 +6,30 @@ import MainNav from '../../MoleculeComponent/MainNav';
 
 import './style.scss';
 
-function HeaderBlockView({ logo, nav }) {
+function HeaderBlockView({ appName, navItem }) {
   return (
     <header className="header-block">
       <PrimaryText className="logo">
-        Polymerize
+        { appName }
       </PrimaryText>
       <MainNav>
-        {[
-          {
-            route: '#',
-            routeName: 'About',
-          },
-          {
-            route: '#',
-            routeName: 'contact',
-          },
-        ]}
+        {navItem}
       </MainNav>
     </header>
   );
 }
+
+HeaderBlockView.defaultProps = {
+  appName: '',
+  navItem: '',
+};
+
+HeaderBlockView.propTypes = {
+  appName: PropTypes.string,
+  navItem: PropTypes.arrayOf(PropTypes.shape({
+    route: PropTypes.string.isRequired,
+    routeName: PropTypes.string.isRequired,
+  })),
+};
 
 export default HeaderBlockView;
