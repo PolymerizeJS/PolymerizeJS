@@ -3,24 +3,24 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-function MediumAnchor({ children, href, className }) {
+function MediumLink({ children, href, className }) {
   return (
-    <a href={href} className={`medium-anchor ${className}`}>
+    <a href={href} className={`medium-link ${className}`}>
       {children}
     </a>
   );
 }
 
-MediumAnchor.defaultProps = {
+MediumLink.defaultProps = {
   children: '',
   href: '',
   className: '',
 };
 
-MediumAnchor.propTypes = {
+MediumLink.propTypes = {
   children: PropTypes.string,
   href: PropTypes.string,
   className: PropTypes.string,
 };
 
-export default MediumAnchor;
+export default MediumLink;

@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 
 import './style.scss';
 
 function MainNav({ children }) {
   const MainNavMap = children.map((el, idx) => {
-    return <li key={idx.toString()}><a href={el.route}>{el.routeName}</a></li>;
+    return <li key={idx.toString()}><a href={el.link}>{el.linkName}</a></li>;
   });
   return (
     <nav className="main-nav">
@@ -18,8 +19,10 @@ function MainNav({ children }) {
 
 MainNav.propTypes = {
   children: PropTypes.arrayOf(PropTypes.shape({
-    routeName: PropTypes.string.isRequired,
-    route: PropTypes.string.isRequired,
+    linkName: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    button: PropTypes.bool.isRequired,
+    router: PropTypes.bool.isRequired,
   })).isRequired,
 };
 

@@ -7,14 +7,14 @@ import CallToAction from '../../MoleculeComponent/CallToAction';
 // style
 import './style.scss';
 
-function BannerBlockView({ primaryTextContent, secondaryTextContent, anchorName, buttonName }) {
+function BannerBlockView({ primaryTextContent, secondaryTextContent, linkName, buttonName }) {
   return (
     <section className="banner-block">
       <CallToAction>
         {{
           primaryTextContent,
           secondaryTextContent,
-          anchorName,
+          linkName,
           buttonName,
         }}
       </CallToAction>
@@ -25,14 +25,14 @@ function BannerBlockView({ primaryTextContent, secondaryTextContent, anchorName,
 BannerBlockView.defaultProps = {
   primaryTextContent: '',
   secondaryTextContent: '',
-  anchorName: '',
+  linkName: '',
   buttonName: '',
 };
 
 BannerBlockView.propTypes = {
   primaryTextContent: PropTypes.string,
   secondaryTextContent: PropTypes.string,
-  anchorName: PropTypes.string,
+  linkName: PropTypes.string,
   buttonName: PropTypes.string,
 };
 
