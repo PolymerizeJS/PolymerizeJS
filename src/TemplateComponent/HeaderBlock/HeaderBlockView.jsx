@@ -10,7 +10,7 @@ function HeaderBlockView({ appName, navItem }) {
   return (
     <header className="header-block">
       <PrimaryText className="logo">
-        { appName }
+        {appName}
       </PrimaryText>
       <MainNav>
         {navItem}
@@ -22,13 +22,17 @@ function HeaderBlockView({ appName, navItem }) {
 HeaderBlockView.defaultProps = {
   appName: '',
   navItem: '',
+  button: false,
+  router: false,
 };
 
 HeaderBlockView.propTypes = {
   appName: PropTypes.string,
   navItem: PropTypes.arrayOf(PropTypes.shape({
-    route: PropTypes.string.isRequired,
-    routeName: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    linkName: PropTypes.string.isRequired,
+    button: PropTypes.bool,
+    router: PropTypes.bool,
   })),
 };
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import SecondaryText from '../../AtomComponent/SecondaryText';
 import SmallText from '../../AtomComponent/SmallText';
 import MediumButton from '../../AtomComponent/MediumButton';
-import MediumAnchor from '../../AtomComponent/MediumAnchor';
+import MediumLink from '../../AtomComponent/MediumLink';
 
 import './style.scss';
 
@@ -24,10 +24,10 @@ function TitleTextButton({ children }) {
         </MediumButton>
       }
       {
-        children.anchorName !== '' &&
-        <MediumAnchor>
-          {children.anchorName}
-        </MediumAnchor>
+        children.linkName !== '' &&
+        <MediumLink>
+          {children.linkName}
+        </MediumLink>
       }
     </section>
   );

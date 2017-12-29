@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-function SmallButton({ children, className }) {
+function SmallButton({ children, onClick, className }) {
   return (
-    <button className={`small-button ${className}`}>
+    <button
+      className={`small-button ${className}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );
@@ -14,11 +17,13 @@ function SmallButton({ children, className }) {
 SmallButton.defaultProps = {
   children: '',
   className: '',
+  onClick: '',
 };
 
 SmallButton.propTypes = {
   children: PropTypes.string,
   className: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default SmallButton;

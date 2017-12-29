@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-function LargeButton({ children, className }) {
+function LargeButton({ children, onClick, className }) {
   return (
-    <button className={`large-button ${className}`}>
+    <button
+      className={`large-button ${className}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );
@@ -14,11 +17,13 @@ function LargeButton({ children, className }) {
 LargeButton.defaultProps = {
   children: '',
   className: '',
+  onClick: '',
 };
 
 LargeButton.propTypes = {
   children: PropTypes.string,
   className: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default LargeButton;

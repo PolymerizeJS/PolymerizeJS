@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import MediumText from '../../AtomComponent/MediumText';
 import SmallText from '../../AtomComponent/SmallText';
-import MediumAnchor from '../../AtomComponent/MediumAnchor';
+import MediumLink from '../../AtomComponent/MediumLink';
 import MediumButton from '../../AtomComponent/MediumButton';
 
 import './style.scss';
@@ -24,10 +24,10 @@ function CallToAction({ children }) {
         </MediumButton>
       }
       {
-        children.anchorName !== '' &&
-        <MediumAnchor>
-          {children.anchorName}
-        </MediumAnchor>
+        children.linkName !== '' &&
+        <MediumLink>
+          {children.linkName}
+        </MediumLink>
       }
     </section>
   );
