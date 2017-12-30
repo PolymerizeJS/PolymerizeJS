@@ -24,14 +24,16 @@ function ExtraSmallLink({ children, to, button, router, className }) {
 ExtraSmallLink.defaultProps = {
   children: '',
   to: '',
+  button: false,
+  router: false,
   className: '',
 };
 
 ExtraSmallLink.propTypes = {
   children: PropTypes.string,
   to: PropTypes.string,
-  button: PropTypes.bool.isRequired,
-  router: PropTypes.bool.isRequired,
+  button: PropTypes.bool,
+  router: PropTypes.bool,
   className: PropTypes.string,
 };
 

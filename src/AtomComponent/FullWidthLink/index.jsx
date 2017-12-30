@@ -4,24 +4,24 @@ import { Link } from 'react-router-dom';
 
 import './style.scss';
 
-function SmallLink({ children, to, button, router, className }) {
+function FullWidthLink({ children, to, button, router, className }) {
   let linkButtonClass = '';
-  if (button === true) linkButtonClass = 'small-link-button';
+  if (button === true) linkButtonClass = 'full-width-link-button';
   if (router === true) {
     return (
-      <Link href={to} className={`small-link ${className} ${linkButtonClass}`}>
+      <Link href={to} className={`full-width-link ${className} ${linkButtonClass}`}>
         {children}
       </Link>
     );
   }
   return (
-    <a href={to} className={`small-link ${className} ${linkButtonClass}`}>
+    <a href={to} className={`full-width-link ${className} ${linkButtonClass}`}>
       {children}
     </a>
   );
 }
 
-SmallLink.defaultProps = {
+FullWidthLink.defaultProps = {
   children: '',
   to: '',
   button: false,
@@ -29,7 +29,7 @@ SmallLink.defaultProps = {
   className: '',
 };
 
-SmallLink.propTypes = {
+FullWidthLink.propTypes = {
   children: PropTypes.string,
   to: PropTypes.string,
   button: PropTypes.bool.isRequired,
@@ -37,4 +37,4 @@ SmallLink.propTypes = {
   className: PropTypes.string,
 };
 
-export default SmallLink;
+export default FullWidthLink;

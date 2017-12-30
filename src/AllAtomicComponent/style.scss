@@ -5,11 +5,34 @@
   background: #FFFFFF !important;
 }
 
-.all-atomic-component * {
-  display: block;
+.all-atomic-component section {
   margin-bottom: 2%;
+  background: #FFFFFF !important;
 }
 
 .all-atomic-component *:last-child {
   margin-bottom: 0;
+}
+
+.aac-text * {
+  margin-bottom: 2%;
+}
+
+.acc-link * {
+  display: block;
+  margin-bottom: 2%;
+}
+
+.acc-link-button section {
+  margin-bottom: 2%;
+}
+
+.acc-button  * {
+  display: block;
+  margin-bottom: 2%;
+}
+
+.acc-input * {
+  display: block;
+  margin-bottom: 2%;
 }
