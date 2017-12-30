@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import SecondaryText from '../../AtomComponent/SecondaryText';
 import SmallText from '../../AtomComponent/SmallText';
-import MediumButton from '../../AtomComponent/MediumButton';
-import MediumLink from '../../AtomComponent/MediumLink';
+import SmallButton from '../../AtomComponent/SmallButton';
+import SmallLink from '../../AtomComponent/SmallLink';
+import SecondaryText from '../../AtomComponent/SecondaryText';
 
 import './style.scss';
 
@@ -19,15 +19,15 @@ function TitleTextButton({ children }) {
       </SmallText>
       {
         children.buttonName !== '' &&
-        <MediumButton>
+        <SmallButton>
           {children.buttonName}
-        </MediumButton>
+        </SmallButton>
       }
       {
         children.linkName !== '' &&
-        <MediumLink button>
+        <SmallLink button>
           {children.linkName}
-        </MediumLink>
+        </SmallLink>
       }
     </section>
   );

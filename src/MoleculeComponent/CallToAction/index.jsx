@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import MediumText from '../../AtomComponent/MediumText';
 import SmallText from '../../AtomComponent/SmallText';
-import MediumLink from '../../AtomComponent/MediumLink';
-import MediumButton from '../../AtomComponent/MediumButton';
+import SmallLink from '../../AtomComponent/SmallLink';
+import SmallButton from '../../AtomComponent/SmallButton';
+import MediumText from '../../AtomComponent/MediumText';
 
 import './style.scss';
 
@@ -19,15 +19,15 @@ function CallToAction({ children }) {
       </SmallText>
       {
         children.buttonName !== '' &&
-        <MediumButton>
+        <SmallButton>
           {children.buttonName}
-        </MediumButton>
+        </SmallButton>
       }
       {
         children.linkName !== '' &&
-        <MediumLink button>
+        <SmallLink button>
           {children.linkName}
-        </MediumLink>
+        </SmallLink>
       }
     </section>
   );
