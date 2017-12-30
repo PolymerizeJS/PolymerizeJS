@@ -72,45 +72,45 @@ function AllAtomicComponent() {
       <section className="acc-link-button">
         <section className="acc-link-button-1">
           <ExtraSmallLink onClick={clicked} button>
-            ExtraSmallLinkButton
+            Extra Small Link Button
           </ExtraSmallLink>
         </section>
         <section className="acc-link-button-2">
           <SmallLink onClick={clicked} button>
-            SmallLinkButtonButton
+            Small Link Button
           </SmallLink>
         </section>
         <section className="acc-link-button-3">
           <MediumLink onClick={clicked} button>
-            MediumLinkButtonButton
+            Medium Link Button
           </MediumLink>
         </section>
         <section className="acc-link-button-4">
           <LargeLink onClick={clicked} button>
-            LargeLinkButtonButton
+            Large Link Button
           </LargeLink>
         </section>
         <section className="acc-link-button-5">
           <FullWdithLink onClick={clicked} button>
-            FullWidthLinkButtonButton
+            Full Width Link Button
           </FullWdithLink>
         </section>
       </section>
       <section className="acc-button">
         <ExtraSmallButton onClick={clicked}>
-          I am a extra small button
+          Extra Small Button
         </ExtraSmallButton>
         <SmallButton onClick={clicked}>
-          I am a small button
+          Small Button
         </SmallButton>
         <MediumButton onClick={clicked}>
-          I am a medium button
+          Medium Button
         </MediumButton>
         <LargeButton onClick={clicked}>
-          I am a large button
+          Large Button
         </LargeButton>
         <FullWidthButton onClick={clicked}>
-          I am a full width button
+          Full Width Button
         </FullWidthButton>
       </section>
       <section className="acc-input">
