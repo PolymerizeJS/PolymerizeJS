@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import SecondaryText from '../../AtomComponent/SecondaryText';
 import SmallText from '../../AtomComponent/SmallText';
+import SmallButton from '../../AtomComponent/SmallButton';
+import SecondaryText from '../../AtomComponent/SecondaryText';
 import FullWidthInput from '../../AtomComponent/FullWidthInput';
 import FullWidthTextarea from '../../AtomComponent/FullWidthTextarea';
-import MediumButton from '../../AtomComponent/MediumButton';
 
 import {
   handleName,
@@ -42,11 +42,11 @@ function ContactFormBlockView({ dispatch, name, subject, email, message }) {
           onChange={e => dispatch(handleMessage(e.target.value))}
           value={message}
         />
-        <MediumButton
+        <SmallButton
           onClick={() => dispatch(handleSend(''))}
         >
           Send
-        </MediumButton>
+        </SmallButton>
       </form>
     </section>
   );

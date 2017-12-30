@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import MediumLink from '../../AtomComponent/MediumLink';
+import SmallLink from '../../AtomComponent/SmallLink';
 
 import './style.scss';
 
@@ -9,9 +9,9 @@ function MainNav({ children }) {
   const MainNavMap = children.map((el, idx) => {
     return (
       <li key={idx.toString()}>
-        <MediumLink to={el.link} button={el.button} router={el.router}>
+        <SmallLink to={el.link} button={el.button} router={el.router}>
           {el.linkName}
-        </MediumLink>
+        </SmallLink>
       </li>
     );
   });

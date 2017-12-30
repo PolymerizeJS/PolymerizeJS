@@ -9,11 +9,13 @@ import SecondaryText from '../AtomComponent/SecondaryText';
 import PrimaryText from '../AtomComponent/PrimaryText';
 
 // link components
+import ExtraSmallLink from '../AtomComponent/ExtraSmallLink';
 import SmallLink from '../AtomComponent/SmallLink';
 import MediumLink from '../AtomComponent/MediumLink';
 import LargeLink from '../AtomComponent/LargeLink';
 
 // button components
+import ExtraSmallButton from '../AtomComponent/ExtraSmallButton';
 import SmallButton from '../AtomComponent/SmallButton';
 import MediumButton from '../AtomComponent/MediumButton';
 import LargeButton from '../AtomComponent/LargeButton';
@@ -48,31 +50,40 @@ function AllAtomicComponent() {
       <PrimaryText>
         PrimaryText: I think you look quite nice today!
       </PrimaryText>
-      <SmallLink>
+      <ExtraSmallLink onClick={e => e.target.value}>
+        ExtraSmallLink: I think you look quite nice today!
+      </ExtraSmallLink>
+      <SmallLink onClick={e => e.target.value}>
         SmallLink: I think you look quite nice today!
       </SmallLink>
-      <MediumLink>
+      <MediumLink onClick={e => e.target.value}>
         MediumLink: I think you look quite nice today!
       </MediumLink>
-      <LargeLink>
+      <LargeLink onClick={e => e.target.value}>
         LargeLink: I think you look quite nice today!
       </LargeLink>
-      <SmallLink button>
+      <ExtraSmallLink onClick={e => e.target.value} button>
+        ExtraSmallLink: I think you look quite nice today!
+      </ExtraSmallLink>
+      <SmallLink onClick={e => e.target.value} button>
         SmallLinkButton: I think you look quite nice today!
       </SmallLink>
-      <MediumLink button>
+      <MediumLink onClick={e => e.target.value} button>
         MediumLinkButton: I think you look quite nice today!
       </MediumLink>
-      <LargeLink button>
+      <LargeLink onClick={e => e.target.value} button>
         LargeLinkButton: I think you look quite nice today!
       </LargeLink>
-      <SmallButton>
+      <ExtraSmallButton>
+        I am a extra small button
+      </ExtraSmallButton>
+      <SmallButton onClick={e => e.target.value}>
         I am a small button
       </SmallButton>
-      <MediumButton>
+      <MediumButton onClick={e => e.target.value}>
         I am a medium button
       </MediumButton>
-      <LargeButton>
+      <LargeButton onClick={e => e.target.value}>
         I am a large button
       </LargeButton>
       <FullWidthButton>
