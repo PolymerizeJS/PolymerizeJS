@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // component
-import CallToAction from '../../MoleculeComponent/CallToAction';
+import SmallText from '../../AtomComponent/SmallText';
+import SmallLink from '../../AtomComponent/SmallLink';
+import SmallButton from '../../AtomComponent/SmallButton';
+import MediumText from '../../AtomComponent/MediumText';
 
 // style
 import './style.scss';
@@ -10,14 +13,26 @@ import './style.scss';
 function BannerBlockView({ primaryTextContent, secondaryTextContent, linkName, buttonName }) {
   return (
     <section className="banner-block">
-      <CallToAction>
-        {{
-          primaryTextContent,
-          secondaryTextContent,
-          linkName,
-          buttonName,
-        }}
-      </CallToAction>
+      <section className="call-to-action">
+        <MediumText>
+          {primaryTextContent}
+        </MediumText>
+        <SmallText>
+          {secondaryTextContent}
+        </SmallText>
+        {
+          buttonName !== '' &&
+          <SmallButton>
+            {buttonName}
+          </SmallButton>
+        }
+        {
+          linkName !== '' &&
+          <SmallLink button>
+            {linkName}
+          </SmallLink>
+        }
+      </section>
     </section>
   );
 }
