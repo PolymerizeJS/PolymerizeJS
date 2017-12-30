@@ -1,21 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import TitleTextButton from '../../MoleculeComponent/TitleTextButton';
+import SmallText from '../../AtomComponent/SmallText';
+import SmallButton from '../../AtomComponent/SmallButton';
+import SmallLink from '../../AtomComponent/SmallLink';
+import SecondaryText from '../../AtomComponent/SecondaryText';
 
 import './style.scss';
 
 function BlockContentView({ primaryTextContent, secondaryTextContent, linkName, buttonName }) {
   return (
     <section className="content-block">
-      <TitleTextButton>
-        {{
-          primaryTextContent,
-          secondaryTextContent,
-          linkName,
-          buttonName,
-        }}
-      </TitleTextButton>
+      <section className="title-text-button">
+        <SecondaryText>
+          {primaryTextContent}
+        </SecondaryText>
+        <SmallText>
+          {secondaryTextContent}
+        </SmallText>
+        {
+          buttonName !== '' &&
+          <SmallButton>
+            {buttonName}
+          </SmallButton>
+        }
+        {
+          linkName !== '' &&
+          <SmallLink button>
+            {linkName}
+          </SmallLink>
+        }
+      </section>
     </section>
   );
 }

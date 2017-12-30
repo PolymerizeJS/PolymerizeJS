@@ -5,3 +5,14 @@
   height: 560px;
   background: #e7e7e7;
 }
+
+.banner-block .call-to-action {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 62%;
+}
+
+.banner-block .call-to-action * {
+  margin-top: 2%;
+}

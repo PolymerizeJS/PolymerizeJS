@@ -13,19 +13,19 @@ function LandingPage() {
     appName: 'Polymerize',
     navItem: [
       {
-        linkName: 'documentation',
+        name: 'documentation',
         to: '#',
         button: false,
         router: false,
       },
       {
-        linkName: 'support',
+        name: 'support',
         to: '#',
         button: false,
         router: false,
       },
       {
-        linkName: 'Sign up',
+        name: 'Sign up',
         to: '#',
         button: true,
         router: false,

@@ -13,3 +13,13 @@
 .header-block * {
   vertical-align: middle;
 }
+
+.header-block .main-nav {
+  display: inline-block;
+  margin-left: 10%;
+}
+
+.header-block .main-nav li {
+  display: inline-block;
+  margin-right: 30px;
+}
