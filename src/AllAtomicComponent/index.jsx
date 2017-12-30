@@ -8,13 +8,18 @@ import LargeText from '../AtomComponent/LargeText';
 import SecondaryText from '../AtomComponent/SecondaryText';
 import PrimaryText from '../AtomComponent/PrimaryText';
 
+// link components
+import SmallLink from '../AtomComponent/SmallLink';
+import MediumLink from '../AtomComponent/MediumLink';
+import LargeLink from '../AtomComponent/LargeLink';
+
 // button components
 import SmallButton from '../AtomComponent/SmallButton';
 import MediumButton from '../AtomComponent/MediumButton';
 import LargeButton from '../AtomComponent/LargeButton';
 import FullWidthButton from '../AtomComponent/FullWidthButton';
 
-// form component
+// form components
 import HalfWidthInput from '../AtomComponent/HalfWidthInput';
 import HalfWidthTextarea from '../AtomComponent/HalfWidthTextarea';
 import FullWidthInput from '../AtomComponent/FullWidthInput';
@@ -43,6 +48,24 @@ function AllAtomicComponent() {
       <PrimaryText>
         PrimaryText: I think you look quite nice today!
       </PrimaryText>
+      <SmallLink>
+        SmallLink: I think you look quite nice today!
+      </SmallLink>
+      <MediumLink>
+        MediumLink: I think you look quite nice today!
+      </MediumLink>
+      <LargeLink>
+        LargeLink: I think you look quite nice today!
+      </LargeLink>
+      <SmallLink button>
+        SmallLinkButton: I think you look quite nice today!
+      </SmallLink>
+      <MediumLink button>
+        MediumLinkButton: I think you look quite nice today!
+      </MediumLink>
+      <LargeLink button>
+        LargeLinkButton: I think you look quite nice today!
+      </LargeLink>
       <SmallButton>
         I am a small button
       </SmallButton>

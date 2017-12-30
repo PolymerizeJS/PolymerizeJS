@@ -25,7 +25,7 @@ function TitleTextButton({ children }) {
       }
       {
         children.linkName !== '' &&
-        <MediumLink>
+        <MediumLink button>
           {children.linkName}
         </MediumLink>
       }

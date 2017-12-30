@@ -1,13 +1,12 @@
-.medium-link {
+.small-link {
   display: inline-block;
-  font-size: 1.0rem;
+  font-size: 0.8rem;
 }
-
-.medium-link-button {
-  height: 40px;
-  padding: 0 5%;
+.small-link-button {
+  height: 30px;
+  padding: 0 3%;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
   letter-spacing: 0.01px;
   color: white;
   background: #30A2F2;
@@ -15,6 +14,6 @@
   transition: all ease 0.5s;
 }
 
-.medium-link:hover {
+.small-link-button {
   background: #0890EF;
 }
