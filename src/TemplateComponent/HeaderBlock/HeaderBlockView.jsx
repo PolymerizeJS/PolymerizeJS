@@ -29,8 +29,8 @@ HeaderBlockView.defaultProps = {
 HeaderBlockView.propTypes = {
   appName: PropTypes.string,
   navItem: PropTypes.arrayOf(PropTypes.shape({
-    link: PropTypes.string.isRequired,
     linkName: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
     button: PropTypes.bool,
     router: PropTypes.bool,
   })),
