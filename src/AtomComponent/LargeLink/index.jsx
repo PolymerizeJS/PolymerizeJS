@@ -24,6 +24,8 @@ function LargeLink({ children, to, button, router, className }) {
 LargeLink.defaultProps = {
   children: '',
   to: '',
+  button: false,
+  router: false,
   className: '',
 };
 

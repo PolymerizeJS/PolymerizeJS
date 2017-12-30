@@ -24,6 +24,8 @@ function MediumLink({ children, to, button, router, className }) {
 MediumLink.defaultProps = {
   children: '',
   to: '',
+  button: false,
+  router: false,
   className: '',
 };
 
