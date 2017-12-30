@@ -1,12 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
+
+import MediumLink from '../../AtomComponent/MediumLink';
 
 import './style.scss';
 
 function MainNav({ children }) {
   const MainNavMap = children.map((el, idx) => {
-    return <li key={idx.toString()}><a href={el.link}>{el.linkName}</a></li>;
+    return (
+      <li key={idx.toString()}>
+        <MediumLink to={el.link} button={el.button} router={el.router}>
+          {el.linkName}
+        </MediumLink>
+      </li>
+    );
   });
   return (
     <nav className="main-nav">

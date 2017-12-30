@@ -4,30 +4,30 @@ import { Link } from 'react-router-dom';
 
 import './style.scss';
 
-function MediumLink({ children, to, button, router, className }) {
+function LargeLink({ children, to, button, router, className }) {
   let linkButtonClass = '';
-  if (button === true) linkButtonClass = 'medium-link-button';
+  if (button === true) linkButtonClass = 'large-link-button';
   if (router === true) {
     return (
-      <Link href={to} className={`medium-link ${className} ${linkButtonClass}`}>
+      <Link href={to} className={`large-link ${className} ${linkButtonClass}`}>
         {children}
       </Link>
     );
   }
   return (
-    <a href={to} className={`medium-link ${className} ${linkButtonClass}`}>
+    <a href={to} className={`large-link ${className} ${linkButtonClass}`}>
       {children}
     </a>
   );
 }
 
-MediumLink.defaultProps = {
+LargeLink.defaultProps = {
   children: '',
   to: '',
   className: '',
 };
 
-MediumLink.propTypes = {
+LargeLink.propTypes = {
   children: PropTypes.string,
   to: PropTypes.string,
   button: PropTypes.bool.isRequired,
@@ -35,4 +35,4 @@ MediumLink.propTypes = {
   className: PropTypes.string,
 };
 
-export default MediumLink;
+export default LargeLink;

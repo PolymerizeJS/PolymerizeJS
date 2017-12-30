@@ -25,7 +25,7 @@ function CallToAction({ children }) {
       }
       {
         children.linkName !== '' &&
-        <MediumLink>
+        <MediumLink button>
           {children.linkName}
         </MediumLink>
       }
