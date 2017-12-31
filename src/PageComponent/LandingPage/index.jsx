@@ -52,22 +52,70 @@ function LandingPage() {
     {
       primaryTextContent: 'Styled and configurable templates with reusable components to enable software engineers to create elegant product',
       secondaryTextContent: 'Polymerize is created after seeing many talented software engineers struggling to come up with initial UI layout.',
-      linkName: 'Github',
-      buttonName: '',
+      actionItem: [
+        {
+          name: 'Github',
+          link: {
+            to: '#',
+            router: false,
+            buttonStyle: true,
+          },
+          button: false,
+        },
+        {
+          name: 'documentation',
+          link: false,
+          button: {
+            onClick: () => { console.log('clicked!'); },
+          },
+        },
+      ],
     },
   ];
   const contentBlockData = [
     {
       primaryTextContent: 'Alinea',
       secondaryTextContent: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-      linkName: 'Get it on Github',
-      buttonName: '',
+      actionItem: [
+        {
+          name: 'Github',
+          link: {
+            to: '#',
+            router: false,
+            buttonStyle: true,
+          },
+          button: false,
+        },
+        {
+          name: 'documentation',
+          link: false,
+          button: {
+            onClick: () => { console.log('clicked!'); },
+          },
+        },
+      ],
     },
     {
       primaryTextContent: 'Apollo',
       secondaryTextContent: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
-      linkName: 'Get it on Github',
-      buttonName: '',
+      actionItem: [
+        {
+          name: 'Github',
+          link: {
+            to: '#',
+            router: false,
+            buttonStyle: true,
+          },
+          button: false,
+        },
+        {
+          name: 'documentation',
+          link: false,
+          button: {
+            onClick: () => { console.log('clicked!'); },
+          },
+        },
+      ],
     },
   ];
   const BannerBlockMap = bannerBlockData.map((el, idx) => {

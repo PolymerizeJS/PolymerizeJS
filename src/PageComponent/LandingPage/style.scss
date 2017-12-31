@@ -11,7 +11,7 @@ h1, h2, h3, h4, p {
 }
 
 @for $i from 2 through 9 {
-  .landing-page section:nth-of-type(#{$i}) {
+  .landing-page > section:nth-of-type(#{$i}) {
     background-color: darken($color: #FFFFFF, $amount: $i * 3);
   }
 }

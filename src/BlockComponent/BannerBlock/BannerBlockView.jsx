@@ -10,28 +10,35 @@ import MediumText from '../../AtomComponent/MediumText';
 // style
 import './style.scss';
 
-function BannerBlockView({ primaryTextContent, secondaryTextContent, linkName, buttonName }) {
+function BannerBlockView({ primaryTextContent, secondaryTextContent, actionItem }) {
+  const ActionItemMap = actionItem.map((el, idx) => {
+    if (el.link instanceof Object) {
+      return (
+        <SmallLink key={idx.toString()} to={el.link.to} button={el.link.buttonStyle} router={el.link.router}>
+          {el.name}
+        </SmallLink>
+      );
+    }
+    return (
+      <SmallButton key={idx.toString()} onClick={el.button.onClick}>
+        {el.name}
+      </SmallButton>
+    );
+  });
   return (
     <section className="banner-block">
       <section className="call-to-action">
-        <MediumText>
-          {primaryTextContent}
-        </MediumText>
-        <SmallText>
-          {secondaryTextContent}
-        </SmallText>
-        {
-          buttonName !== '' &&
-          <SmallButton>
-            {buttonName}
-          </SmallButton>
-        }
-        {
-          linkName !== '' &&
-          <SmallLink button>
-            {linkName}
-          </SmallLink>
-        }
+        <section className="action-text">
+          <MediumText>
+            {primaryTextContent}
+          </MediumText>
+          <SmallText>
+            {secondaryTextContent}
+          </SmallText>
+        </section>
+        <section className="action-item">
+          {ActionItemMap}
+        </section>
       </section>
     </section>
   );
@@ -40,15 +47,29 @@ function BannerBlockView({ primaryTextContent, secondaryTextContent, linkName, b
 BannerBlockView.defaultProps = {
   primaryTextContent: '',
   secondaryTextContent: '',
-  linkName: '',
-  buttonName: '',
+  actionItem: [],
 };
 
 BannerBlockView.propTypes = {
   primaryTextContent: PropTypes.string,
   secondaryTextContent: PropTypes.string,
-  linkName: PropTypes.string,
-  buttonName: PropTypes.string,
+  actionItem: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    link: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.shape({
+        to: PropTypes.string.isRequired,
+        router: PropTypes.bool.isRequired,
+        buttonStyle: PropTypes.bool.isRequired,
+      }),
+    ]),
+    button: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.shape({
+        onClick: PropTypes.func.isRequired,
+      }),
+    ]),
+  })),
 };
 
 export default BannerBlockView;
