@@ -2,9 +2,12 @@ import React from 'react';
 
 import HeaderBlock from '../../BlockComponent/HeaderBlock/HeaderBlock';
 import BannerBlock from '../../BlockComponent/BannerBlock/BannerBlock';
-import ContentBlock from '../../BlockComponent/ContentBlock/ContentBlock';
+import TextContentBlock from '../../BlockComponent/TextContentBlock/TextContentBlock';
+import ImageContentBlock from '../../BlockComponent/ImageContentBlock/ImageContentBlock';
 import ContactFormBlock from '../../BlockComponent/ContactFormBlock/ContactFormBlock';
 import AllAtomicComponent from '../../AllAtomicComponent';
+
+import placeHolderImage from '../../assets/placeholder.jpeg';
 
 import './style.scss';
 
@@ -72,7 +75,7 @@ function LandingPage() {
       ],
     },
   ];
-  const contentBlockData = [
+  const textContentBlockData = [
     {
       primaryTextContent: 'Alinea',
       secondaryTextContent: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
@@ -118,11 +121,20 @@ function LandingPage() {
       ],
     },
   ];
+  const imageContentBlockData = [
+    {
+      name: 'ice and water with blue overlay',
+      source: `dist/${placeHolderImage}`,
+    },
+  ];
   const BannerBlockMap = bannerBlockData.map((el, idx) => {
     return <BannerBlock key={idx.toString()}>{el}</BannerBlock>;
   });
-  const ContentBlockMap = contentBlockData.map((el, idx) => {
-    return <ContentBlock key={idx.toString()}>{el}</ContentBlock>;
+  const TextContentBlockMap = textContentBlockData.map((el, idx) => {
+    return <TextContentBlock key={idx.toString()}>{el}</TextContentBlock>;
+  });
+  const ImageContentBlockMap = imageContentBlockData.map((el, idx) => {
+    return <ImageContentBlock key={idx.toString()}>{el}</ImageContentBlock>;
   });
   return (
     <section className="landing-page">
@@ -130,7 +142,8 @@ function LandingPage() {
         {headerBlockData}
       </HeaderBlock>
       {BannerBlockMap}
-      {ContentBlockMap}
+      {TextContentBlockMap}
+      {ImageContentBlockMap}
       <ContactFormBlock />
       <AllAtomicComponent />
     </section>

@@ -1,7 +1,7 @@
-const loadImageContent = (name, src) => ({
+const loadImageContent = (name, source) => ({
   type: 'LOAD_IMAGE_CONTENT',
   name,
-  src,
+  source,
 });
 
 export default loadImageContent;
