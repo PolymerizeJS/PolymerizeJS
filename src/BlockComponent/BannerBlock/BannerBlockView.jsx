@@ -14,7 +14,12 @@ function BannerBlockView({ primaryTextContent, secondaryTextContent, actionItem 
   const ActionItemMap = actionItem.map((el, idx) => {
     if (el.link instanceof Object) {
       return (
-        <SmallLink key={idx.toString()} to={el.link.to} button={el.link.buttonStyle} router={el.link.router}>
+        <SmallLink
+          key={idx.toString()}
+          to={el.link.to}
+          button={el.link.buttonStyle}
+          router={el.link.router}
+        >
           {el.name}
         </SmallLink>
       );

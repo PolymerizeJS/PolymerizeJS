@@ -8,11 +8,16 @@ import SecondaryText from '../../AtomComponent/SecondaryText';
 
 import './style.scss';
 
-function BlockContentView({ primaryTextContent, secondaryTextContent, actionItem }) {
+function TextBlockContentView({ primaryTextContent, secondaryTextContent, actionItem }) {
   const ActionItemMap = actionItem.map((el, idx) => {
     if (el.link instanceof Object) {
       return (
-        <SmallLink key={idx.toString()} to={el.link.to} button={el.link.buttonStyle} router={el.link.router}>
+        <SmallLink
+          key={idx.toString()}
+          to={el.link.to}
+          button={el.link.buttonStyle}
+          router={el.link.router}
+        >
           {el.name}
         </SmallLink>
       );
@@ -42,13 +47,13 @@ function BlockContentView({ primaryTextContent, secondaryTextContent, actionItem
   );
 }
 
-BlockContentView.defaultProps = {
+TextBlockContentView.defaultProps = {
   primaryTextContent: '',
   secondaryTextContent: '',
   actionItem: [],
 };
 
-BlockContentView.propTypes = {
+TextBlockContentView.propTypes = {
   primaryTextContent: PropTypes.string,
   secondaryTextContent: PropTypes.string,
   actionItem: PropTypes.arrayOf(PropTypes.shape({
@@ -70,4 +75,4 @@ BlockContentView.propTypes = {
   })),
 };
 
-export default BlockContentView;
+export default TextBlockContentView;

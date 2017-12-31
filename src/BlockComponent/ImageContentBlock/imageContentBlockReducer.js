@@ -1,6 +1,6 @@
 const initialState = {
   name: '',
-  src: '',
+  source: '',
 };
 
 const handleAction = (state = initialState, action) => {
@@ -8,8 +8,8 @@ const handleAction = (state = initialState, action) => {
     case 'LOAD_IMAGE_CONTENT':
       return {
         name: action.name,
-        src: action.src,
-      }
+        source: action.source,
+      };
     default:
       return state;
   }
