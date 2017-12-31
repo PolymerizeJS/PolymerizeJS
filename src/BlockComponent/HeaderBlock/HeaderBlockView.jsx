@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import ExtraSmallLink from '../../AtomComponent/ExtraSmallLink';
+import ExtraSmallButton from '../../AtomComponent/ExtraSmallButton';
 import SmallLink from '../../AtomComponent/SmallLink';
 import PrimaryText from '../../AtomComponent/PrimaryText';
 
@@ -9,20 +10,29 @@ import './style.scss';
 
 function HeaderBlockView({ appName, navItem }) {
   const MainNavMap = navItem.map((el, idx) => {
-    if (el.button === true) {
+    if (el.link instanceof Object) {
+      if (el.link.buttonStyle === true) {
+        return (
+          <li key={idx.toString()}>
+            <ExtraSmallLink to={el.link.to} button={el.link.buttonStyle} router={el.link.router}>
+              {el.name}
+            </ExtraSmallLink>
+          </li>
+        );
+      }
       return (
         <li key={idx.toString()}>
-          <ExtraSmallLink to={el.to} button={el.button} router={el.router}>
+          <SmallLink to={el.link.to} button={el.link.buttonStyle} router={el.link.router}>
             {el.name}
-          </ExtraSmallLink>
+          </SmallLink>
         </li>
       );
     }
     return (
       <li key={idx.toString()}>
-        <SmallLink to={el.to} button={el.button} router={el.router}>
+        <ExtraSmallButton onClick={el.button.onClick}>
           {el.name}
-        </SmallLink>
+        </ExtraSmallButton>
       </li>
     );
   });
@@ -43,6 +53,7 @@ function HeaderBlockView({ appName, navItem }) {
 HeaderBlockView.defaultProps = {
   appName: '',
   navItem: '',
+  link: false,
   button: false,
   router: false,
 };
@@ -51,9 +62,20 @@ HeaderBlockView.propTypes = {
   appName: PropTypes.string,
   navItem: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-    button: PropTypes.bool,
-    router: PropTypes.bool,
+    link: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.shape({
+        to: PropTypes.string,
+        router: PropTypes.bool,
+        buttonStyle: PropTypes.bool,
+      }),
+    ]),
+    button: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.shape({
+        onClick: PropTypes.string,
+      }),
+    ]),
   })),
 };
 
