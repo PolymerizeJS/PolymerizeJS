@@ -7,11 +7,11 @@ import BannerBlockAction from './BannerBlockAction';
 const mapStateToProps = state => state.bannerBlockReducer;
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const initialData = ownProps.children;
+  const bannerData = ownProps.children;
   return dispatch(BannerBlockAction(
-    initialData.primaryTextContent,
-    initialData.secondaryTextContent,
-    initialData.actionItem,
+    bannerData.primaryTextContent,
+    bannerData.secondaryTextContent,
+    bannerData.actionItem,
   ));
 };
 
