@@ -9,7 +9,7 @@ function SmallLink({ children, to, button, router, className }) {
   if (button === true) linkButtonClass = 'small-link-button';
   if (router === true) {
     return (
-      <Link href={to} className={`small-link ${className} ${linkButtonClass}`}>
+      <Link to={to} className={`small-link ${className} ${linkButtonClass}`}>
         {children}
       </Link>
     );

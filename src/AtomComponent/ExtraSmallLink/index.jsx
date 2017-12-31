@@ -9,7 +9,7 @@ function ExtraSmallLink({ children, to, button, router, className }) {
   if (button === true) linkButtonClass = 'extra-small-link-button';
   if (router === true) {
     return (
-      <Link href={to} className={`extra-small-link ${className} ${linkButtonClass}`}>
+      <Link to={to} className={`extra-small-link ${className} ${linkButtonClass}`}>
         {children}
       </Link>
     );

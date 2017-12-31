@@ -9,7 +9,7 @@ function LargeLink({ children, to, button, router, className }) {
   if (button === true) linkButtonClass = 'large-link-button';
   if (router === true) {
     return (
-      <Link href={to} className={`large-link ${className} ${linkButtonClass}`}>
+      <Link to={to} className={`large-link ${className} ${linkButtonClass}`}>
         {children}
       </Link>
     );

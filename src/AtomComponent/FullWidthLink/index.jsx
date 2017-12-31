@@ -9,7 +9,7 @@ function FullWidthLink({ children, to, button, router, className }) {
   if (button === true) linkButtonClass = 'full-width-link-button';
   if (router === true) {
     return (
-      <Link href={to} className={`full-width-link ${className} ${linkButtonClass}`}>
+      <Link to={to} className={`full-width-link ${className} ${linkButtonClass}`}>
         {children}
       </Link>
     );

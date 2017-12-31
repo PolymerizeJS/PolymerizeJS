@@ -1,9 +1,9 @@
 import React from 'react';
 
-import HeaderBlock from '../../TemplateComponent/HeaderBlock/HeaderBlock';
-import BannerBlock from '../../TemplateComponent/BannerBlock/BannerBlock';
-import ContentBlock from '../../TemplateComponent/ContentBlock/ContentBlock';
-import ContactFormBlock from '../../TemplateComponent/ContactFormBlock/ContactFormBlock';
+import HeaderBlock from '../../BlockComponent/HeaderBlock/HeaderBlock';
+import BannerBlock from '../../BlockComponent/BannerBlock/BannerBlock';
+import ContentBlock from '../../BlockComponent/ContentBlock/ContentBlock';
+import ContactFormBlock from '../../BlockComponent/ContactFormBlock/ContactFormBlock';
 import AllAtomicComponent from '../../AllAtomicComponent';
 
 import './style.scss';
@@ -14,21 +14,37 @@ function LandingPage() {
     navItem: [
       {
         name: 'documentation',
-        to: '#',
+        link: {
+          to: '#',
+          router: false,
+          buttonStyle: false,
+        },
         button: false,
-        router: false,
       },
       {
         name: 'support',
-        to: '#',
+        link: {
+          to: '#',
+          router: false,
+          buttonStyle: false,
+        },
         button: false,
-        router: false,
       },
       {
         name: 'Sign up',
-        to: '#',
-        button: true,
-        router: false,
+        link: {
+          to: '/hello',
+          router: true,
+          buttonStyle: true,
+        },
+        button: false,
+      },
+      {
+        name: 'Test Button',
+        link: false,
+        button: {
+          onClick: () => { console.log('hello'); },
+        },
       },
     ],
   };
