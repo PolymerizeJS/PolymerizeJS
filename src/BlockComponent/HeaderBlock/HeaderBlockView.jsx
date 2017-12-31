@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import ExtraSmallLink from '../../AtomComponent/ExtraSmallLink';
 import ExtraSmallButton from '../../AtomComponent/ExtraSmallButton';
-import SmallLink from '../../AtomComponent/SmallLink';
 import PrimaryText from '../../AtomComponent/PrimaryText';
 
 import './style.scss';
@@ -22,9 +21,9 @@ function HeaderBlockView({ appName, navItem }) {
       }
       return (
         <li key={idx.toString()}>
-          <SmallLink to={el.link.to} button={el.link.buttonStyle} router={el.link.router}>
+          <ExtraSmallLink to={el.link.to} button={el.link.buttonStyle} router={el.link.router}>
             {el.name}
-          </SmallLink>
+          </ExtraSmallLink>
         </li>
       );
     }
