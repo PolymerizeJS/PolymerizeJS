@@ -12,8 +12,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return dispatch(ContentBlockAction(
     contentBlockData.primaryTextContent,
     contentBlockData.secondaryTextContent,
-    contentBlockData.linkName,
-    contentBlockData.buttonName,
+    contentBlockData.actionItem,
   ));
 };
 

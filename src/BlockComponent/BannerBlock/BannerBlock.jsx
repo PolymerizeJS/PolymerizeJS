@@ -11,8 +11,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return dispatch(BannerBlockAction(
     initialData.primaryTextContent,
     initialData.secondaryTextContent,
-    initialData.linkName,
-    initialData.buttonName,
+    initialData.actionItem,
   ));
 };
 

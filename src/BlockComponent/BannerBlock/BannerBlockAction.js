@@ -1,9 +1,8 @@
-const loadBannerContent = (primaryTextContent, secondaryTextContent, linkName, buttonName) => ({
+const loadBannerContent = (primaryTextContent, secondaryTextContent, actionItem) => ({
   type: 'LOAD_BANNER_CONTENT',
   primaryTextContent,
   secondaryTextContent,
-  linkName,
-  buttonName,
+  actionItem,
 });
 
 export default loadBannerContent;

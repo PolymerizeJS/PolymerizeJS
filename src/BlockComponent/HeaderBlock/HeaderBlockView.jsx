@@ -52,7 +52,7 @@ function HeaderBlockView({ appName, navItem }) {
 
 HeaderBlockView.defaultProps = {
   appName: '',
-  navItem: '',
+  navItem: [],
   link: false,
   button: false,
   router: false,
@@ -65,15 +65,15 @@ HeaderBlockView.propTypes = {
     link: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.shape({
-        to: PropTypes.string,
-        router: PropTypes.bool,
-        buttonStyle: PropTypes.bool,
+        to: PropTypes.string.isRequired,
+        router: PropTypes.bool.isRequired,
+        buttonStyle: PropTypes.bool.isRequired,
       }),
     ]),
     button: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.shape({
-        onClick: PropTypes.string,
+        onClick: PropTypes.func.isRequired,
       }),
     ]),
   })),

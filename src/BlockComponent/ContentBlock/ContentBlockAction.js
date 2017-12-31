@@ -1,9 +1,8 @@
-const loadContent = (primaryTextContent, secondaryTextContent, linkName, buttonName) => ({
+const loadContent = (primaryTextContent, secondaryTextContent, actionItem) => ({
   type: 'LOAD_BLOCK_CONTENT',
   primaryTextContent,
   secondaryTextContent,
-  linkName,
-  buttonName,
+  actionItem,
 });
 
 export default loadContent;

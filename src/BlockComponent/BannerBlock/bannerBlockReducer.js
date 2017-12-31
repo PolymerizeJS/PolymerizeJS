@@ -1,8 +1,7 @@
 const initialState = {
   primaryTextContent: '',
   secondaryTextContent: '',
-  linkName: '',
-  buttonName: '',
+  actionItem: [],
 };
 
 const handleAction = (state = initialState, action) => {
@@ -11,8 +10,7 @@ const handleAction = (state = initialState, action) => {
       return {
         primaryTextContent: action.primaryTextContent,
         secondaryTextContent: action.secondaryTextContent,
-        linkName: action.linkName,
-        buttonName: action.buttonName,
+        actionItem: action.actionItem,
       };
     default:
       return state;
