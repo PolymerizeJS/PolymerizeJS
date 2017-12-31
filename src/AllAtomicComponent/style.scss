@@ -2,7 +2,7 @@
 
 .all-atomic-component {
   @include block-style(100%);
-  background: #FFFFFF !important;
+  background: rgb(241, 241, 241) !important;
 }
 
 .all-atomic-component section {
