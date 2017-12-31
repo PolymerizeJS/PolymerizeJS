@@ -7,50 +7,18 @@ import ImageContentBlock from '../../BlockComponent/ImageContentBlock/ImageConte
 import ContactFormBlock from '../../BlockComponent/ContactFormBlock/ContactFormBlock';
 import AllAtomicComponent from '../../AllAtomicComponent';
 
+// data
+import HeaderBlockConfig from '../../config/HeaderBlockConfig';
+
 import placeHolderImage from '../../assets/placeholder.jpeg';
 
 import './style.scss';
 
 function LandingPage() {
-  const headerBlockData = {
-    appName: 'Polymerize',
-    navItem: [
-      {
-        name: 'documentation',
-        link: {
-          to: '#',
-          router: false,
-          buttonStyle: false,
-        },
-        button: false,
-      },
-      {
-        name: 'support',
-        link: {
-          to: '#',
-          router: false,
-          buttonStyle: false,
-        },
-        button: false,
-      },
-      {
-        name: 'Sign up',
-        link: {
-          to: '/hello',
-          router: true,
-          buttonStyle: true,
-        },
-        button: false,
-      },
-      {
-        name: 'Test Button',
-        link: false,
-        button: {
-          onClick: () => { console.log('hello'); },
-        },
-      },
-    ],
-  };
+  const headerBlockData = new HeaderBlockConfig('Polymerize');
+  headerBlockData.addNavLink('documentation', '#', false, false);
+  headerBlockData.addNavLink('support', '#', false, false);
+  headerBlockData.addNavButton('Test Button', () => { console.log('clicked!'); });
   const bannerBlockData = [
     {
       primaryTextContent: 'Styled and configurable templates with reusable components to enable software engineers to create elegant product',
