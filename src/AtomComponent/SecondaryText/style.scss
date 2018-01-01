@@ -1,5 +1,7 @@
+@import "../../style/_variables.scss";
+
 .secondary-text {
-  font-size: 1.50rem;
+  font-size: $secondary-font-size;
   font-weight: 700;
   color: #FFFFFF;
   letter-spacing: 0.02px;

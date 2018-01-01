@@ -1,15 +1,13 @@
+@import "../../style/_variables.scss";
+@import '../../style/_mixins.scss';
+
 .medium-button {
-  display: inline-block;
-  height: 50px;
-  padding: 0 34px;
-  text-align: center;
-  line-height: 50px;
-  font-size: 1.5rem;
+  @include button-style(50px, 34px);
+  font-size: $medium-font-size;
   letter-spacing: 0.01px;
   color: white;
   background: #30A2F2;
   box-shadow: 0 5px 4px 0 rgba(38, 80, 126, 0.59);
-  transition: all ease 0.5s;
 }
 
 .medium-button:hover {

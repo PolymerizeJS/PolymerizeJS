@@ -1,5 +1,7 @@
+@import "../../style/_variables.scss";
+
 .primary-text {
-  font-size: 1.75rem;
+  font-size: $primary-font-size;
   font-weight: 700;
   color: #FFFFFF;
   letter-spacing: 0.02px;
