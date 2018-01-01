@@ -8,7 +8,7 @@ import SecondaryText from '../../AtomComponent/SecondaryText';
 
 import './style.scss';
 
-function TextBlockContentView({ primaryTextContent, secondaryTextContent, actionItem }) {
+function TextBlockContentView({ primaryText, secondaryText, actionItem }) {
   const ActionItemMap = actionItem.map((el, idx) => {
     if (el.link instanceof Object) {
       return (
@@ -29,17 +29,17 @@ function TextBlockContentView({ primaryTextContent, secondaryTextContent, action
     );
   });
   return (
-    <section className="content-block">
-      <section className="content-block-item">
-        <section className="content-block-text">
+    <section className="text-block">
+      <section className="text-block-item">
+        <section className="text-block-text">
           <SecondaryText>
-            {primaryTextContent}
+            {primaryText}
           </SecondaryText>
           <SmallText>
-            {secondaryTextContent}
+            {secondaryText}
           </SmallText>
         </section>
-        <section className="content-block-action">
+        <section className="text-block-action">
           {ActionItemMap}
         </section>
       </section>
@@ -48,14 +48,14 @@ function TextBlockContentView({ primaryTextContent, secondaryTextContent, action
 }
 
 TextBlockContentView.defaultProps = {
-  primaryTextContent: '',
-  secondaryTextContent: '',
+  primaryText: '',
+  secondaryText: '',
   actionItem: [],
 };
 
 TextBlockContentView.propTypes = {
-  primaryTextContent: PropTypes.string,
-  secondaryTextContent: PropTypes.string,
+  primaryText: PropTypes.string,
+  secondaryText: PropTypes.string,
   actionItem: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     link: PropTypes.oneOfType([

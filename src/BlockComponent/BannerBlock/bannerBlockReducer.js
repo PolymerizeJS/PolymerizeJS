@@ -1,6 +1,6 @@
 const initialState = {
-  primaryTextContent: '',
-  secondaryTextContent: '',
+  primaryText: '',
+  secondaryText: '',
   actionItem: [],
 };
 
@@ -8,8 +8,8 @@ const handleAction = (state = initialState, action) => {
   switch (action.type) {
     case 'LOAD_BANNER_BLOCK_CONTENT':
       return {
-        primaryTextContent: action.primaryTextContent,
-        secondaryTextContent: action.secondaryTextContent,
+        primaryText: action.primaryText,
+        secondaryText: action.secondaryText,
         actionItem: action.actionItem,
       };
     default:

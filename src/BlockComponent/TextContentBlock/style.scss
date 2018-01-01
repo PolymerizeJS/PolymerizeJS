@@ -1,17 +1,17 @@
 @import "../../style/_mixins.scss";
 
-.content-block {
+.text-block {
   @include block-style(100%);
 }
 
-.content-block .content-block-item {
+.text-block .text-block-item {
   width: 82%;
 }
 
-.content-block .content-block-text * {
+.text-block .text-block-text * {
   margin-bottom: 2%;
 }
 
-.content-block .content-block-action * {
+.text-block .text-block-action * {
   margin-right: 30px;
 }

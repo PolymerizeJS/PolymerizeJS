@@ -9,8 +9,8 @@ const mapStateToProps = state => state.bannerBlockReducer;
 const mapDispatchToProps = (dispatch, ownProps) => {
   const bannerData = ownProps.children;
   return dispatch(BannerBlockAction(
-    bannerData.primaryTextContent,
-    bannerData.secondaryTextContent,
+    bannerData.primaryText,
+    bannerData.secondaryText,
     bannerData.actionItem,
   ));
 };
