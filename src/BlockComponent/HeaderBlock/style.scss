@@ -3,23 +3,22 @@
 .header-block {
   @include block-style(100%);
   position: absolute;
+  display: flex;
+  justify-content: space-between;
   z-index: 10;
 }
 
-.header-block .logo {
-  display: inline-block;
-}
-
-.header-block * {
-  vertical-align: middle;
-}
-
+.header-block .logo,
 .header-block .main-nav {
   display: inline-block;
-  margin-left: 10%;
+  vertical-align: middle;
 }
 
 .header-block .main-nav li {
   display: inline-block;
   margin-right: 30px;
+}
+
+.header-block .main-nav li:last-child {
+  margin-right: 0;
 }
