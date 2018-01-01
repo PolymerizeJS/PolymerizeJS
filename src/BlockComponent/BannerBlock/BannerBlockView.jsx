@@ -10,7 +10,7 @@ import MediumText from '../../AtomComponent/MediumText';
 // style
 import './style.scss';
 
-function BannerBlockView({ primaryTextContent, secondaryTextContent, actionItem }) {
+function BannerBlockView({ primaryText, secondaryText, actionItem }) {
   const ActionItemMap = actionItem.map((el, idx) => {
     if (el.link instanceof Object) {
       return (
@@ -35,10 +35,10 @@ function BannerBlockView({ primaryTextContent, secondaryTextContent, actionItem 
       <section className="call-to-action">
         <section className="action-text">
           <MediumText>
-            {primaryTextContent}
+            {primaryText}
           </MediumText>
           <SmallText>
-            {secondaryTextContent}
+            {secondaryText}
           </SmallText>
         </section>
         <section className="action-item">
@@ -50,14 +50,14 @@ function BannerBlockView({ primaryTextContent, secondaryTextContent, actionItem 
 }
 
 BannerBlockView.defaultProps = {
-  primaryTextContent: '',
-  secondaryTextContent: '',
+  primaryText: '',
+  secondaryText: '',
   actionItem: [],
 };
 
 BannerBlockView.propTypes = {
-  primaryTextContent: PropTypes.string,
-  secondaryTextContent: PropTypes.string,
+  primaryText: PropTypes.string,
+  secondaryText: PropTypes.string,
   actionItem: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     link: PropTypes.oneOfType([

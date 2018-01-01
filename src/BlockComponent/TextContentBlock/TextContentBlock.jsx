@@ -10,8 +10,8 @@ const mapStateToProps = state => state.textContentBlockReducer;
 const mapDispatchToProps = (dispatch, ownProps) => {
   const textContentBlockData = ownProps.children;
   return dispatch(TextContentBlockAction(
-    textContentBlockData.primaryTextContent,
-    textContentBlockData.secondaryTextContent,
+    textContentBlockData.primaryText,
+    textContentBlockData.secondaryText,
     textContentBlockData.actionItem,
   ));
 };

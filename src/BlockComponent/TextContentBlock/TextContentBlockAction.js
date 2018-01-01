@@ -1,7 +1,7 @@
-const loadContent = (primaryTextContent, secondaryTextContent, actionItem) => ({
+const loadContent = (primaryText, secondaryText, actionItem) => ({
   type: 'LOAD_TEXT_BLOCK_CONTENT',
-  primaryTextContent,
-  secondaryTextContent,
+  primaryText,
+  secondaryText,
   actionItem,
 });
 

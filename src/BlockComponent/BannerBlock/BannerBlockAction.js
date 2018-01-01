@@ -1,7 +1,7 @@
-const loadBannerContent = (primaryTextContent, secondaryTextContent, actionItem) => ({
+const loadBannerContent = (primaryText, secondaryText, actionItem) => ({
   type: 'LOAD_BANNER_BLOCK_CONTENT',
-  primaryTextContent,
-  secondaryTextContent,
+  primaryText,
+  secondaryText,
   actionItem,
 });
 

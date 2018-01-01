@@ -1,8 +1,16 @@
 // header block contains app name/logo, and navigation links
 class headerBlockData {
-  constructor(appName) {
-    this.appName = appName;
+  constructor() {
+    this.appName = '';
     this.navItem = [];
+  }
+
+  defineAppName(name) {
+    if (typeof name !== 'string') {
+      return new Error('{ appName } must be a string');
+    }
+    this.appName = name;
+    return this.appName;
   }
 
   // addNavLink: add an anchor tag to the header navigation
